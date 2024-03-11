@@ -1,7 +1,7 @@
 let counter = 0;
-const rock = 'rock';
-const paper = 'paper';
-const scissors = 'scissors';
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
 
 let playerSelection = '';
 const computerSelection = getComputerChoice();
@@ -13,9 +13,20 @@ function getComputerChoice() {
    return result;
 }
 
+rock.addEventListener('click', () => {
+   playRound('rock', getComputerChoice());
+});
+
+paper.addEventListener('click', () => {
+   playRound('paper', getComputerChoice());
+});
+
+scissors.addEventListener('click', () => {
+   playRound('scissors', getComputerChoice());
+});
+
 function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt("Please enter your choice: rock, paper, scissors").toLowerCase();
-    computerSelection = getComputerChoice();
+    
     console.log('computer chose: ', computerSelection);
     console.log('player chose: ', playerSelection);
     counter = 0;
@@ -51,22 +62,25 @@ function playRound(playerSelection, computerSelection) {
     console.log(roundResult);
     console.log(counter);
     return roundResult, counter; 
-    
-    
-
     }
 
-function playGame() {
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    if (counter >= 3) {
-        alert("You won the game!");
-        } 
-    else alert("You lost the game, maybe next time");
-}
+    
+
+    
+
+
+
+// function playGame() {
+//     playRound();
+//     playRound();
+//     playRound();
+//     playRound();
+//     playRound();
+//     if (counter >= 3) {
+//         alert("You won the game!");
+//         } 
+//     else alert("You lost the game, maybe next time");
+// }
 
 
 
