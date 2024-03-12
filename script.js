@@ -22,7 +22,7 @@ Rock.addEventListener('click', () => {
    const computerSelection = getComputerChoice();
 
    
-   para.textContent = `ComputerSelection: ${computerSelection}`;
+   para.textContent = `Computer selected: ${computerSelection}`;
    div.appendChild(para);
    if (playerSelection === "Rock" && computerSelection === "Scissors") {
        playerScore++
@@ -33,7 +33,7 @@ Rock.addEventListener('click', () => {
        computerScore++
    };
 
-   scoreElement.textContent = `PlayerScore: ${playerScore}  x  ComputerScore: ${computerScore}`;
+   scoreElement.textContent = `Player's score: ${playerScore}  x  Computer's score: ${computerScore}`;
 
    if (playerScore === 5) {
        displayResult.textContent = "You Win!";
@@ -60,7 +60,7 @@ Paper.addEventListener('click', () => {
    const playerSelection = "Paper";
    const computerSelection = getComputerChoice();
 
-   para.textContent = `ComputerSelection: ${computerSelection}`;
+   para.textContent = `Computer selected: ${computerSelection}`;
    div.appendChild(para);
 
    if (playerSelection === "Paper" && computerSelection === "Scissors") {
@@ -73,7 +73,7 @@ Paper.addEventListener('click', () => {
    else {
        playerScore++
    }
-   scoreElement.textContent = `PlayerScore: ${playerScore}  x  ComputerScore: ${computerScore}`;
+   scoreElement.textContent = `Player's score: ${playerScore}  x  Computer's score: ${computerScore}`;
    if (playerScore === 5) {
        displayResult.textContent = "You Win!";
        div.appendChild(displayResult);
@@ -97,7 +97,7 @@ Paper.addEventListener('click', () => {
 Scissors.addEventListener('click', () => {
    const playerSelection = "Scissors";
    const computerSelection = getComputerChoice();
-   para.textContent = `ComputerSelection: ${computerSelection}`;
+   para.textContent = `Computer selected: ${computerSelection}`;
    div.appendChild(para);
    if (playerSelection === "Scissors" && computerSelection === "Rock") {
        computerScore++
@@ -109,7 +109,7 @@ Scissors.addEventListener('click', () => {
    else {
        playerScore++
    }
-   scoreElement.textContent = `PlayerScore: ${playerScore}  x  ComputerScore: ${computerScore}`;
+   scoreElement.textContent = `Player's score: ${playerScore}  x  Computer's score: ${computerScore}`;
 
    if (playerScore === 5) {
        displayResult.textContent = "You Win!";
